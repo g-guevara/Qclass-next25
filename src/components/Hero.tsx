@@ -42,8 +42,8 @@ const Hero: React.FC = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.3 }}
         transition={{ duration: 1 }}
-        style={{ 
-          backgroundImage: 'url(https://images.pexels.com/photos/8472854/pexels-photo-8472854.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)'
+        style={{
+          backgroundImage: 'url(/img/dav.jpg)' // Agregado 'url()' y '/' al inicio
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-white via-white/70 to-transparent"></div>

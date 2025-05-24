@@ -21,7 +21,7 @@ const translations = {
     
     // Hero
     'hero.system': 'QCLASS construction system',
-    'hero.curves': 'with built-in curves',
+    'hero.curves': 'Built-in curves',
     'hero.check': 'Check the best cleanroom laboratory unit with unlimited possibilities to customize your cleanroom.',
     'hero.request': 'Request your cleanroom laboratory unit (like the design on the photo or other configuration) for medicines, research, production or for your specific requirement and obtain the highest standards of quality and asepsis.',
     'hero.cta': 'Request your built-in curved cleanroom laboratory unit',
@@ -49,7 +49,7 @@ const translations = {
     
     // Hero
     'hero.system': 'Sistema de construcción QCLASS',
-    'hero.curves': 'con curvas incorporadas',
+    'hero.curves': 'Curvas incorporadas',
     'hero.check': 'Descubre la mejor unidad de laboratorio con sala limpia con posibilidades ilimitadas para personalizar tu sala limpia.',
     'hero.request': 'Solicita tu unidad de laboratorio con sala limpia (como el diseño en la foto u otra configuración) para medicamentos, investigación, producción o para tu requerimiento específico y obtén los más altos estándares de calidad y asepsia.',
     'hero.cta': 'Solicita tu unidad de laboratorio con curvas incorporadas',
