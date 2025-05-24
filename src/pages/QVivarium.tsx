@@ -18,22 +18,20 @@ const QVivarium: React.FC = () => {
       title: 'Co-founder & CEO',
       profession: 'Civil Engineer',
       bio: 'I\'m the Production Director of the cleanroom laboratory units, working and focusing on the production stage of the cleanroom laboratory unit, and that cleanrooms meet the highest standards that your lab requires.',
-      image: 'https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+      image: '/img/pjp.jpeg'
     },
     {
       name: 'Guillermo Guevara',
       title: 'Co-founder & Technical Director',
       profession: 'Architect',
       bio: 'I created the curved system in 2000 to help laboratories with problems with contamination. Since 2000 we have been helping with all the requirements and fetails that exist to meet cleanrooms highest standards',
-      image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-    },
+      image: '/img/ggg.jpg'    },
     {
       name: 'Luis Zorrilla',
       title: 'VP of Business Development',
       profession: 'Biologist',
       bio: 'Over 25 years of experience in the review and evaluation of the design, operation, and management of AAALAC-accredited facilities.',
-      image: 'https://images.pexels.com/photos/5490276/pexels-photo-5490276.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-    }
+      image: '/img/luisZ.png'    }
   ];
 
   const benefits = [
@@ -67,16 +65,14 @@ const QVivarium: React.FC = () => {
         'We clad surfaces while following the original floor plan of your research facility and adding independent, dedicated HVAC systems.',
         'We can scale projects based on client needs and complete the project in sections.'
       ],
-      image: 'https://images.pexels.com/photos/8489918/pexels-photo-8489918.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-    },
+      image: '/img/spc.png'    },
     {
       title: 'Design New Custom Facilities',
       points: [
         'We can customize and design research facilities utilizing the building\'s internal space.',
         'QVivarium can build self-contained research facilities capable of supporting any type of research activity.'
       ],
-      image: 'https://images.pexels.com/photos/3735709/pexels-photo-3735709.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-    },
+      image: '/img/air.png'    },
     {
       title: 'Modular Construction',
       points: [
@@ -84,38 +80,43 @@ const QVivarium: React.FC = () => {
         'Design with expansion in mind, while meeting immediate needs.',
         'Allow for future expansion opportunities as the research program grows.'
       ],
-      image: 'https://images.pexels.com/photos/3735780/pexels-photo-3735780.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-    }
+      image: '/img/wrkrs.png'    }
   ];
 
   const galleryImages = [
-    'https://images.pexels.com/photos/8489784/pexels-photo-8489784.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    'https://images.pexels.com/photos/8489825/pexels-photo-8489825.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    'https://images.pexels.com/photos/8489840/pexels-photo-8489840.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    'https://images.pexels.com/photos/8489848/pexels-photo-8489848.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    'https://images.pexels.com/photos/8489854/pexels-photo-8489854.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    'https://images.pexels.com/photos/8489862/pexels-photo-8489862.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-  ];
+'/img/1.png' ,
+'/img/2.png' ,
+'/img/3.png' ,
+'/img/pp2.png' ,
+'/img/pp3.png' ,
+'/img/pp6.png' ,
+]
 
   return (
     <>
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="relative py-32 bg-gray-50">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="relative py-32 bg-gray-50 overflow-hidden">
+          <div 
+            className="absolute inset-0 z-0 bg-cover bg-center opacity-10"
+            style={{ 
+              backgroundImage: 'url(/img/our.png)'
+            }}
+          />
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.5 }}
-              className="max-w-4xl mx-auto text-center mb-16"
+              className="max-w-4xl mx-auto text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
                 {t('qvivarium.title')}
               </h1>
-              <p className="text-xl text-gray-600">{t('qvivarium.description')}</p>
+              <p className="text-xl text-gray-600 mb-12">{t('qvivarium.description')}</p>
             </motion.div>
 
-            {/* Team Info */}
+            {/* Team Grid */}
             <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {team.map((member, index) => (
                 <motion.div
@@ -123,12 +124,22 @@ const QVivarium: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg p-6"
+                  className="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300"
                 >
-                  <h3 className="text-2xl font-bold mb-2">{member.name}</h3>
-                  <p className="text-primary-600 font-medium mb-2">{member.title}</p>
-                  <p className="text-gray-600 mb-4">{member.profession}</p>
-                  <p className="text-gray-700">{member.bio}</p>
+                  <div className="relative">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-64 object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-2xl font-bold mb-2">{member.name}</h3>
+                    <p className="text-primary-600 font-medium mb-2">{member.title}</p>
+                    <p className="text-gray-600 mb-4">{member.profession}</p>
+                    <p className="text-gray-700">{member.bio}</p>
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -159,7 +170,7 @@ const QVivarium: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:border-primary-500 transition-colors"
+                  className="bg-white p-8 rounded-xl shadow-xl border border-gray-100 hover:border-primary-500 transition-colors"
                 >
                   <div className="mb-6">{benefit.icon}</div>
                   <h3 className="text-xl font-bold mb-4">{benefit.title}</h3>
@@ -168,87 +179,63 @@ const QVivarium: React.FC = () => {
               ))}
             </div>
 
+            {/* Gallery Grid */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={inView ? { opacity: 1 } : { opacity: 0 }}
+              transition={{ duration: 0.5 }}
+              className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-16"
+            >
+              {galleryImages.map((image, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="relative group overflow-hidden rounded-xl"
+                >
+                  <img
+                    src={image}
+                    alt="QVivarium facility"
+                    className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </motion.div>
+              ))}
+            </motion.div>
+
             {/* Build Options */}
-            <div className="space-y-8 mb-16">
+            <div className="space-y-12">
               {buildOptions.map((option, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg p-8"
+                  className="bg-white rounded-xl shadow-xl overflow-hidden"
                 >
-                  <h3 className="text-2xl font-bold mb-6">{option.title}</h3>
-                  <ul className="space-y-4">
-                    {option.points.map((point, idx) => (
-                      <li key={idx} className="flex items-start">
-                        <CheckCircle2 className="h-6 w-6 text-primary-500 mr-3 flex-shrink-0" />
-                        <span className="text-gray-700">{point}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="md:flex">
+                    <div className="md:w-1/2">
+                      <img
+                        src={option.image}
+                        alt={option.title}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="md:w-1/2 p-8">
+                      <h3 className="text-2xl font-bold mb-6">{option.title}</h3>
+                      <ul className="space-y-4">
+                        {option.points.map((point, idx) => (
+                          <li key={idx} className="flex items-start">
+                            <CheckCircle2 className="h-6 w-6 text-primary-500 mr-3 flex-shrink-0" />
+                            <span className="text-gray-700">{point}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
                 </motion.div>
               ))}
-            </div>
-
-            {/* Image Gallery */}
-            <div className="space-y-12">
-              {/* Team Images */}
-              <div className="grid grid-cols-3 gap-4">
-                {team.map((member, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="relative aspect-square overflow-hidden rounded-xl"
-                  >
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </motion.div>
-                ))}
-              </div>
-
-              {/* Build Options Images */}
-              <div className="grid grid-cols-3 gap-4">
-                {buildOptions.map((option, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="relative aspect-square overflow-hidden rounded-xl"
-                  >
-                    <img
-                      src={option.image}
-                      alt={option.title}
-                      className="w-full h-full object-cover"
-                    />
-                  </motion.div>
-                ))}
-              </div>
-
-              {/* Additional Gallery Images */}
-              <div className="grid grid-cols-3 gap-4">
-                {galleryImages.slice(0, 6).map((image, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="relative aspect-square overflow-hidden rounded-xl"
-                  >
-                    <img
-                      src={image}
-                      alt="QVivarium facility"
-                      className="w-full h-full object-cover"
-                    />
-                  </motion.div>
-                ))}
-              </div>
             </div>
 
             {/* CTA Section */}
