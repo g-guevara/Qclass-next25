@@ -106,7 +106,7 @@ const QVivarium: React.FC = () => {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               className="max-w-4xl mx-auto text-center"
             >
@@ -116,14 +116,11 @@ const QVivarium: React.FC = () => {
               <p className="text-xl text-gray-600 mb-12">{t('qvivarium.description')}</p>
             </motion.div>
 
-            {/* Team Grid */}
+            {/* Team Grid - Animation Removed */}
             <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {team.map((member, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300"
                 >
                   <div className="relative">
@@ -140,7 +137,7 @@ const QVivarium: React.FC = () => {
                     <p className="text-gray-600 mb-4">{member.profession}</p>
                     <p className="text-gray-700">{member.bio}</p>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
