@@ -6,15 +6,28 @@ const ProjectShowcase: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const projects = [
+
+        {
+      image: "/img/alemana-4.png",
+    },
+        {
+      image: "/img/alemana-2.png",
+    },
+        {
+      image: "/img/alemana-3.png",
+    },
+
     {
-      image: "https://images.pexels.com/photos/8489918/pexels-photo-8489918.jpeg?auto=compress&cs=tinysrgb&w=1920",
+      image: "/img/home-valdivia-1.jpg",
     },
     {
-      image: "https://images.pexels.com/photos/3735709/pexels-photo-3735709.jpeg?auto=compress&cs=tinysrgb&w=1920",
+      image: "/img/home-valdivia-2.jpg",
     },
     {
-      image: "https://images.pexels.com/photos/3735780/pexels-photo-3735780.jpeg?auto=compress&cs=tinysrgb&w=1920",
-    }
+      image: "/img/home-valdivia-3.jpg",
+    },
+
+
   ];
 
   const nextSlide = () => {

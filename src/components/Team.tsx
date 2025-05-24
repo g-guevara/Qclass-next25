@@ -1,7 +1,7 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import { User } from 'lucide-react';
+
 
 const Team: React.FC = () => {
   const [ref, inView] = useInView({
@@ -62,9 +62,7 @@ const Team: React.FC = () => {
                       style={{ borderColor: '#0384c6' }}
                       src={member.image}
                       alt={member.name}
-                      onError={(e) => {
-                        console.error(`Error loading image for ${member.name}:`, member.image);
-                      }}
+
                     />
                     {/* Efecto de brillo opcional */}
                     <div 

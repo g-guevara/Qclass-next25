@@ -17,13 +17,17 @@ const Home: React.FC = () => {
       <main>
         <Hero />
         <Advantages />
+        <ProjectShowcase />        
         <Team />
         <Stats />
-        <Services />
-        <ProjectShowcase />
+        <Gallery />        
+
+
         <Testimonials />
-        <Gallery />
+        <Services />   
         <Customers />
+
+     
         <Contact />
       </main>
       <Footer />

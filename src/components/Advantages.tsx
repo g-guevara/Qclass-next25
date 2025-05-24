@@ -54,7 +54,7 @@ const Advantages: React.FC = () => {
             className="relative"
           >
             <img
-              src="/img/adv.png"
+              src="/img/qp-syst.png"
               alt="QCLASS Cleanroom with built-in curves"
               className="rounded-lg shadow-xl w-full"
             />
