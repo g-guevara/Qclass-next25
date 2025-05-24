@@ -12,19 +12,19 @@ const Gallery: React.FC = () => {
   const galleryItems = [
     {
       title: 'PHARMACY UNIT',
-      image: 'https://images.pexels.com/photos/4226894/pexels-photo-4226894.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image:  '/img/mmoll.gif',
     },
     {
       title: 'MICROBIOLOGY UNIT',
-      image: 'https://images.pexels.com/photos/356040/pexels-photo-356040.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image:  '/img/bradford.gif',
     },
     {
       title: 'CLINIC UNIT',
-      image: 'https://images.pexels.com/photos/247786/pexels-photo-247786.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image:  '/img/davila.gif',
     },
     {
       title: 'RESEARCH UNIT',
-      image: 'https://images.pexels.com/photos/954584/pexels-photo-954584.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image:  '/img/valdivia.gif',
     }
   ];
 
