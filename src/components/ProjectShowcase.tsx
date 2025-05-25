@@ -73,7 +73,6 @@ const ProjectShowcase: React.FC = () => {
                   backgroundSize: 'cover'
                 }}
               >
-                <div className="absolute inset-0 bg-black bg-opacity-20 rounded-lg" />
               </div>
             </motion.div>
           </AnimatePresence>

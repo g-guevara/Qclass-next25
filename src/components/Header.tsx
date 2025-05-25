@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import LanguageSwitch from './LanguageSwitch';
+import Logo from './Logo';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Header: React.FC = () => {
@@ -45,11 +46,7 @@ const Header: React.FC = () => {
               alt="Logo" 
               className="h-12 w-auto"
             />
-<span
-  className="text-xl font-light font-mono tracking-wider uppercase  decoration-[1px] decoration-primary-600 bg-gradient-to-r from-primary-600 to-primary-600/40 bg-clip-text text-transparent"
->
-  Qclass
-</span>
+    <Logo />
 
 
           </Link>

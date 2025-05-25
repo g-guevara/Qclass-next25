@@ -22,7 +22,7 @@ const translations = {
 
     // QVivarium
     'qvivarium.title': 'Our Awesome Team',
-    'qvivarium.description': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
+    'qvivarium.description': 'We are dedicated to developing and delivering the most advanced and effective solutions tailored to the diverse needs and applications within the cleanroom industry, ensuring the highest standards of quality, safety, and innovation',
     'qvivarium.vision.title': 'Our Vision',
     'qvivarium.solution.title': 'The QVivarium Solution',
     'qvivarium.solution.description': 'QVivarium is a system based on the highest standards of cleanroom technology with the flexibility to adapt to the size and scale of the project. The infrastructure, engineering, and systems are proportional to the needs and meet the high standards of research.',

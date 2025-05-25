@@ -14,8 +14,8 @@ const Testimonials: React.FC = () => {
       quote: "We are currently working with the QCLASS team in the habilitation of a Mixing Center in the largest clinic in our network and Bupa in the world. The team has been very proactive during the project, in which they supported us from an early stage with the analyses and evaluations to obtain the approval of the investment, demonstrating high levels of management, flexibility, and planning. The quality of the equipment is remarkable, always available to the client, and has the highest technical knowledge, generating a high level of security and confidence in the work delivered and the Laboratory units offered.",
       name: "Joaquin",
       title: "PROJECT MANAGER",
-      company: "BUPA CLINIC, CHILE",
-      type: "PUBLIC HOSPITAL",
+      company: "BUPA CHILE",
+      type: "CLINIC",
       date: "August, 2022"
     },
     {
@@ -86,7 +86,7 @@ const Testimonials: React.FC = () => {
               <p className="text-gray-600">{testimonials[currentIndex].title}</p>
               <p className="text-primary-600 font-medium">{testimonials[currentIndex].company}</p>
               <p className="text-sm text-gray-500 mt-1">{testimonials[currentIndex].type}</p>
-              <p className="text-sm text-gray-500">{testimonials[currentIndex].date}</p>
+
             </div>
           </motion.div>
 
